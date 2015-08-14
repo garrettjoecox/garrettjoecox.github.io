@@ -39,6 +39,12 @@
     }
   }
 
+  NodeList.prototype.forEach = function(callback) {
+    for (var i = 0; i < this.length; i++) {
+      callback(this.item(i), i, this);
+    }
+  }
+
   function r(min, max) {
     return Math.floor(Math.random()*(max - min)) + min;
   }
