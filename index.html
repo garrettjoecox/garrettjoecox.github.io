@@ -7,47 +7,39 @@
 </head>
 <body>
   <div id="top">
-    <div id="header">
-      <span class="random">G</span><span class="random">a</span><span class="random">r</span><span class="random">r</span><span class="random">e</span><span class="random">t</span><span class="random">t</span>
-      <span class="random">C</span><span class="random">o</span><span class="random">x</span>
-    </div>
+    <div id="header">Garrett Cox</div>
   </div>
   <div id="bottom">
     <a id="github" href="http://github.com/garrettjoecox">
-      <i class="random fa fa-github-square"></i>
+      <i class="fa fa-github-square"></i>
     </a>
     <a id="angellist" href="https://angel.co/garrettjoecox">
-      <i class="random fa fa-square"></i>
+      <i class="fa fa-square"></i>
       <i class="fa fa-angellist"></i>
     </a>
     <a id="linkedin" href="https://www.linkedin.com/in/garrettjoecox">
-      <i class="random fa fa-linkedin-square"></i>
+      <i class="fa fa-linkedin-square"></i>
     </a>
   </div>
+  <canvas id="canvas"></canvas>
+  <script src="gol.js"></script>
   <script>
-  setInterval(function(){
-    var elements = document.getElementsByClassName('random');
-    elements.forEach(function(element) {
-      var rgb = 'rgb(' + r(150, 225) + ',' + r(150, 225) + ',' + r(150, 225) + ')';
-      element.style.color = rgb;
-    });
-  }, 1000);
 
-  HTMLCollection.prototype.forEach = function(callback) {
-    for (var i = 0; i < this.length; i++) {
-      callback(this[i], i, this);
-    }
-  }
+    var defaults = {
+      width: window.innerWidth,
+      height: window.innerHeight,
+      interactive: true,
+      speed: 50,
+      cellSize: 30,
+      opacity: true,
+      state: 'Play',
+      inheritColors: false,
+      boardColor: 'Light Mode',
+      cellColor: '#000'
+    };
 
-  NodeList.prototype.forEach = function(callback) {
-    for (var i = 0; i < this.length; i++) {
-      callback(this.item(i), i, this);
-    }
-  }
+    var gol = new GoL(defaults, '#canvas');
 
-  function r(min, max) {
-    return Math.floor(Math.random()*(max - min)) + min;
-  }
   </script>
 </body>
 </html>
