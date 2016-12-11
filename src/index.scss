@@ -1,3 +1,9 @@
+@import 'components/breakpoints';
+@import 'components/colors';
+@import 'components/form';
+@import 'components/shadows';
+@import 'components/text';
+
 body {
   min-height: 100vh;
   max-height: 100vh;
@@ -44,8 +50,12 @@ div, span, h1 {
 
 ui-navbar {
   z-index: 1;
-  flex: 0 0 8rem;
+  flex: 0 0 4rem;
   align-items: flex-end;
+
+  @include breakpoint(phablet) {
+    flex: 0 0 8rem;
+  }
 }
 
 ui-view {

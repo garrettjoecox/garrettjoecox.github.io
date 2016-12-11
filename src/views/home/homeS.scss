@@ -1,16 +1,29 @@
 .homeV {
   padding-bottom: 10rem;
+  align-items: center;
+
+  @include breakpoint(phablet) {
+    align-items: flex-start;
+  }
 
   >.name {
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: $black;
     font-weight: 500;
+
+    @include breakpoint(phablet) {
+      font-size: 4rem;
+    }
   }
 
   >.occupation {
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: $black;
     font-weight: 300;
+
+    @include breakpoint(phablet) {
+      font-size: 3rem;
+    }
   }
 
 }

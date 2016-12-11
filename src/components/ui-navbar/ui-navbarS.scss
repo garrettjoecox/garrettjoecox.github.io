@@ -1,7 +1,11 @@
 ui-navbar {
 
   .nav {
-    justify-content: flex-end;
+    justify-content: center;
+
+    @include breakpoint(phablet) {
+      justify-content: flex-end;
+    }
 
     .link {
       @extend .row;
