@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
-  <title>Skeleton</title>
+  <title>Garrett Cox</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="google-site-verification" content="QKaBf-q9jtSoWsWHrzudNrFiJ70f3xbvvpbASCjtNdQ"/>
+  <meta name="Description" content="Garrett Cox's Personal Website"/>
+  <meta name="Keywords" content="Garrett Joe Cox personal website github angellist linkedin populr game-of-life"/>
   <link rel="stylesheet" type="text/css" href="dist/vendor.css">
   <link rel="stylesheet" type="text/css" href="dist/index.css">
-  <script src="dist/vendor.js"></script>
-  <script src="dist/index.js"></script>
 </head>
 <body ng-app="skeleton" class="col">
-  <ui-navbar class="row jcc" ng-class="$state.current.noAuth ? 'hide' : ''"></ui-navbar>
-  <ui-view class="f1 row jcc"></ui-view>
+  <div class="overflow-wrapper f1 col">
+    <ui-navbar class="row jcc"></ui-navbar>
+    <ui-view class="f1 row jcc"></ui-view>
+  </div>
+  <ui-particles></ui-particles>
+  <script src="dist/vendor.js"></script>
+  <script src="dist/index.js"></script>
 </body>
 </html>

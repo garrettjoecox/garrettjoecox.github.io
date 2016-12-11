@@ -1,8 +1,8 @@
 {
-  "name": "angular-skeleton",
-  "version": "0.0.1",
-  "description": "Skeleton to help kickstart small angular applications",
-  "main": "api/index.js",
+  "name": "garrettcox.io",
+  "version": "0.0.2",
+  "description": "Personal Website",
+  "main": "dist/index.js",
   "scripts": {
     "prestart": "gulp src",
     "start": "gulp serve",
@@ -10,18 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/garrettjoecox/angular-skeleton.git"
+    "url": "git+https://github.comgarrettjoecox/garrettjoecox.github.io.git"
   },
   "author": "Garrett Cox",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/garrettjoecox/angular-skeleton/issues"
+    "url": "https://github.comgarrettjoecox/garrettjoecox.github.io/issues"
   },
-  "homepage": "https://github.com/garrettjoecox/angular-skeleton#readme",
+  "homepage": "https://github.comgarrettjoecox/garrettjoecox.github.io#readme",
   "devDependencies": {},
   "dependencies": {
     "add-stream": "^1.0.0",
     "angular": "^1.5.8",
+    "angular-typer": "^0.5.5",
     "angular-ui-router": "^0.3.2",
     "babel-preset-es2015": "^6.18.0",
     "eslint": "^3.9.1",
@@ -29,7 +30,6 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.6.0",
-    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^2.0.0",
     "gulp-autoprefixer": "^3.1.1",
@@ -44,6 +44,7 @@
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
     "normalize.css": "^5.0.0",
+    "particles.js": "^2.0.0",
     "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
   }
 }

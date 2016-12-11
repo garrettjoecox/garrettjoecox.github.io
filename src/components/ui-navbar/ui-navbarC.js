@@ -11,8 +11,7 @@
   }
 
   function uiNavbarC($state) {
-    this.logout = () => {
-      $state.go('login');
-    };
+    this.$state = $state;
+    this.states = this.$state.get();
   }
 })();

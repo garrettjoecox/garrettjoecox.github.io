@@ -4,7 +4,8 @@
       "ecmaVersion": 6
   },
   "globals": {
-    "angular": true
+    "angular": true,
+    "particlesJS": true
   },
 
   "rules": {

@@ -1,3 +1,48 @@
 .homeV {
+  padding-bottom: 10rem;
 
+  >.name {
+    font-size: 4rem;
+    color: $black;
+    font-weight: 500;
+  }
+
+  >.occupation {
+    font-size: 3rem;
+    color: $black;
+    font-weight: 300;
+  }
+
+}
+
+.typer__cursor--blink {
+  -webkit-animation: blink 1s infinite;
+  -moz-animation: blink 1s infinite;
+  animation: blink 1s infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

@@ -2,53 +2,31 @@
   angular
     .module('skeleton', [
       'ui.router',
+      'typer',
     ])
-    .config(Config)
-    .factory('AttachTokens', AttachTokens)
-    .run(SetupRouteAuth);
+    .config(Config);
 
-  function Config($urlRouterProvider, $stateProvider, $httpProvider) {
-    $urlRouterProvider.otherwise('/home');
+  function Config($urlRouterProvider, $stateProvider, $locationProvider) {
+    $urlRouterProvider.otherwise('/');
+    $locationProvider.hashPrefix('');
 
     $stateProvider
-      .state('login', {
-        url: '/login',
-        templateUrl: 'views/auth/loginV.html',
-        controller: 'authC as authC',
-        noAuth: true,
-      })
-      .state('signup', {
-        url: '/signup',
-        templateUrl: 'views/auth/signupV.html',
-        controller: 'authC as authC',
-        noAuth: true,
-      })
       .state('home', {
-        url: '/home',
+        url: '/',
         templateUrl: 'views/home/homeV.html',
         controller: 'homeC as homeC',
+      })
+      .state('about', {
+        url: '/about',
+        templateUrl: 'views/about/aboutV.html',
+        controller: 'aboutC as aboutC',
+        nav: 'About',
+      })
+      .state('work', {
+        url: '/work',
+        templateUrl: 'views/work/workV.html',
+        controller: 'workC as workC',
+        nav: 'Work',
       });
-
-    $httpProvider.interceptors.push('AttachTokens');
-  }
-
-  function AttachTokens($window) {
-    return {
-      request(payload) {
-        const token = $window.localStorage.getItem('com.skeleton.token');
-        if (token) payload.headers.Authorization = token;
-        return payload;
-      },
-    };
-  }
-
-  function SetupRouteAuth($rootScope, $location, $state, AuthAPI) {
-    $rootScope.$state = $state;
-    $rootScope.$on('$stateChangeStart', (event, to) => {
-      if (to && !to.noAuth && !AuthAPI.isAuth()) {
-        event.preventDefault();
-        $state.go('login');
-      }
-    });
   }
 })();

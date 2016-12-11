@@ -1,4 +1,3 @@
 <div ng-controller="uiNavbarC as uiNavbarC" class="f1 nav row contained">
-  <span class="logo row aic"><i class="fa fa-twitter"></i>Skeleton</span>
-  <button ng-click="uiNavbarC.logout()" class="button">Logout</button>
+  <a ng-if="state.nav" ng-repeat="state in uiNavbarC.states" href="#{{state.url}}" class="link {{uiNavbarC.$state.current.name === state.name ? 'active' : ''}}">{{state.nav}}</a>
 </div>
