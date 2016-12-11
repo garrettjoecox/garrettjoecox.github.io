@@ -35,8 +35,8 @@
   function AttachTokens($window) {
     return {
       request(payload) {
-        const jwt = $window.localStorage.getItem('com.skeleton.token');
-        if (jwt) payload.headers.Authorization = `JWT ${jwt}`;
+        const token = $window.localStorage.getItem('com.skeleton.token');
+        if (token) payload.headers.Authorization = token;
         return payload;
       },
     };

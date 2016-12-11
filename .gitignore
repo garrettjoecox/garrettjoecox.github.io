@@ -1,4 +1,4 @@
 npm-debug.log*
 node_modules
-app/dist
-app/fonts
+dist
+fonts

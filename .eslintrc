@@ -9,6 +9,7 @@
 
   "rules": {
     "no-use-before-define": ["error", "nofunc"],
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "no-confusing-arrow": "off"
   }
 }

@@ -3,40 +3,47 @@ const gulp = require('gulp');
 const stream = require('add-stream');
 const pl = require('gulp-load-plugins')();
 
-gulp.task('watch', ['src'], () => {
-  pl.livereload.listen();
-  gulp.watch(['app/src/**/*.js', 'app/src/**/*.html'], ['src:js']);
-  gulp.watch(['app/src/**/*.scss'], ['src:css']);
+gulp.task('serve', () => {
+  pl.connect.server({
+    root: '.',
+    port: 9001
+  });
 });
 
 gulp.task('dev', ['watch'], () => {
-  pl.nodemon({
-    script: 'api/index.js',
-    ignore: [ 'node_modules/', 'app/' ]
-  }).on('restart', () => pl.livereload());
+  pl.connect.server({
+    root: '.',
+    port: 9001,
+    livereload: true
+  });
+});
+
+gulp.task('watch', ['src'], () => {
+  gulp.watch(['src/**/*.js', 'src/**/*.html'], ['src:js']);
+  gulp.watch(['src/**/*.scss'], ['src:css']);
 });
 
 gulp.task('src', ['src:js', 'src:css']);
 
 gulp.task('src:js', () => {
 
-  return gulp.src(['app/src/index.js', 'app/src/**/*.js'])
+  return gulp.src(['src/index.js', 'src/**/*.js'])
     .pipe(pl.plumber())
     .pipe(pl.sourcemaps.init())
     .pipe(pl.babel())
-    .pipe(stream.obj(gulp.src('app/src/**/*.html')
+    .pipe(stream.obj(gulp.src('src/**/*.html')
       .pipe(pl.angularTemplatecache({ module: 'skeleton' }))))
     .pipe(pl.concat('index.js'))
     .pipe(pl.ngAnnotate())
     .pipe(pl.uglify())
     .pipe(pl.sourcemaps.write('.'))
-    .pipe(gulp.dest('app/dist'))
-    .pipe(pl.livereload());
+    .pipe(gulp.dest('dist'))
+    .pipe(pl.connect.reload());
 });
 
 gulp.task('src:css', () => {
 
-  return gulp.src(['app/src/**/*.scss'])
+  return gulp.src(['src/**/*.scss'])
     .pipe(pl.plumber())
     .pipe(pl.sourcemaps.init())
     .pipe(pl.concat('index.css'))
@@ -44,8 +51,8 @@ gulp.task('src:css', () => {
     .pipe(pl.autoprefixer())
     .pipe(pl.cleanCss())
     .pipe(pl.sourcemaps.write('.'))
-    .pipe(gulp.dest('app/dist'))
-    .pipe(pl.livereload());
+    .pipe(gulp.dest('dist'))
+    .pipe(pl.connect.reload());
 });
 
 gulp.task('vendor', ['vendor:js', 'vendor:css', 'vendor:fonts']);
@@ -69,7 +76,7 @@ gulp.task('vendor:js', () => {
   return gulp.src(vendor.js)
     .pipe(pl.plumber())
     .pipe(pl.concat('vendor.js'))
-    .pipe(gulp.dest('app/dist'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('vendor:css', () => {
@@ -78,12 +85,12 @@ gulp.task('vendor:css', () => {
     .pipe(pl.plumber())
     .pipe(pl.concat('vendor.css'))
     .pipe(pl.cleanCss())
-    .pipe(gulp.dest('app/dist'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('vendor:fonts', () => {
 
   return gulp.src(vendor.fonts)
     .pipe(pl.plumber())
-    .pipe(gulp.dest('app/fonts'));
+    .pipe(gulp.dest('fonts'));
 });
