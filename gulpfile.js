@@ -60,6 +60,7 @@ gulp.task('vendor', ['vendor:js', 'vendor:css']);
 const vendor = {
   js: [
     'node_modules/angular/angular.min.js',
+    'node_modules/angular-animate/angular-animate.min.js',
     'node_modules/angular-typer/dist/typer.min.js',
     'node_modules/angular-ui-router/release/angular-ui-router.min.js',
     'node_modules/particles.js/particles.js',

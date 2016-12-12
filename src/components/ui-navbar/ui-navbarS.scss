@@ -7,13 +7,37 @@ ui-navbar {
       justify-content: flex-end;
     }
 
-    .link {
-      @extend .row;
-      @extend .aic;
-      padding: 1rem;
-      font-weight: 600;
+    >a {
       text-decoration: none;
       color: $black;
+      @extend .row;
+      @extend .aic;
+    }
+
+    .logo {
+      display: none;
+      @include breakpoint(phablet) {
+        display: flex;
+      }
+
+      margin-right: auto;
+      font-size: 2rem;
+      transition: opacity 250ms ease;
+
+      &.ng-enter,
+      &.ng-leave.ng-leave-active {
+        opacity:0;
+      }
+
+      &.ng-leave,
+      &.ng-enter.ng-enter-active {
+        opacity:1;
+      }
+    }
+
+    .link {
+      padding: 1rem;
+      font-weight: 600;
       text-transform: uppercase;
       transition: color 100ms ease;
 

@@ -3,6 +3,7 @@
     .module('skeleton', [
       'ui.router',
       'typer',
+      'ngAnimate',
     ])
     .config(Config);
 
@@ -22,11 +23,11 @@
         controller: 'aboutC as aboutC',
         nav: 'About',
       })
-      .state('work', {
-        url: '/work',
-        templateUrl: 'views/work/workV.html',
-        controller: 'workC as workC',
-        nav: 'Work',
+      .state('projects', {
+        url: '/projects',
+        templateUrl: 'views/projects/projectsV.html',
+        controller: 'projectsC as projectsC',
+        nav: 'Projects',
       });
   }
 })();

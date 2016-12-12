@@ -1,4 +1,17 @@
 .aboutV {
-  padding-bottom: 10rem;
-  color: $darker-gray;
+  padding-top: 4rem;
+  @extend .col;
+  align-items: center;
+
+  img {
+    max-height: 15rem;
+    max-width: 15rem;
+    border-radius: 100%;
+  }
+
+  span {
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: $black;
+  }
 }
