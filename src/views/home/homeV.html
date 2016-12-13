@@ -1,13 +1,22 @@
-<div class="f1 homeV contained col jcc">
-  <div class="name">Garrett Cox,</div>
-  <div class="occupation">
-    <typer
-      words="['Software Engineer', 'Father', 'Husband', 'Believer', 'Gamer']"
-      type-time="120"
-      backspace-time="50"
-      pause="1500"
-      start-typing="true"
-      shuffle>
-    </typer>
+<div class="f1 homeV contained col">
+  <div class="meta col f1">
+    <div class="name">Garrett Cox,</div>
+    <div class="occupation">
+      <typer
+        words="['Software Engineer', 'Father', 'Husband', 'Believer', 'Gamer']"
+        type-time="120"
+        backspace-time="50"
+        pause="1500"
+        start-typing="true"
+        shuffle>
+      </typer>
+    </div>
+  </div>
+  <div class="nowPlaying">
+    <div>Now Playing</div>
+    <div>
+      <span class="artist">{{homeC.nowPlaying.artist}} /</span>
+      <span class="song">{{homeC.nowPlaying.song}}</span>
+    </div>
   </div>
 </div>

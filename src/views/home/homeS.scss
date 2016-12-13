@@ -1,31 +1,57 @@
 .homeV {
-  padding-bottom: 10rem;
   align-items: center;
+  text-align: center;
 
   @include breakpoint(phablet) {
-    align-items: flex-start;
+    align-items: stretch;
+    text-align: left;
   }
 
-  >.name {
-    font-size: 2.5rem;
-    color: $black;
-    font-weight: 500;
+  .meta {
+    justify-content: center;
+    padding-bottom: 5rem;
 
-    @include breakpoint(phablet) {
-      font-size: 4rem;
+    .name {
+      font-size: 2.5rem;
+      color: $black;
+      font-weight: 500;
+
+      @include breakpoint(phablet) {
+        font-size: 4rem;
+      }
+    }
+
+    .occupation {
+      font-size: 1.5rem;
+      color: $black;
+      font-weight: 300;
+
+      @include breakpoint(phablet) {
+        font-size: 3rem;
+      }
     }
   }
 
-  >.occupation {
-    font-size: 1.5rem;
-    color: $black;
-    font-weight: 300;
+  .nowPlaying {
+    text-align: center;
 
     @include breakpoint(phablet) {
-      font-size: 3rem;
+      text-align: right;
+    }
+    padding-bottom: 5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    .artist {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+
+    .song {
+      font-weight: 300;
+      font-size: 1rem;
     }
   }
-
 }
 
 .typer__cursor--blink {
