@@ -1,0 +1,47 @@
+.exaptive {
+  background: #FFF;
+  justify-content: flex-start;
+  padding-bottom: 5rem;
+
+  .heading {
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+
+    img {
+      max-height: 4rem;
+      max-width: 4rem;
+    }
+
+    span {
+      font-size: 2rem;
+      margin-left: 1rem;
+      margin-bottom: 7px;
+      font-weight: 600;
+    }
+  }
+
+  .preview {
+    flex: 1 0;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .copy {
+    flex: 1 0;
+
+    span {
+      text-align: justify;
+      display: block;
+    }
+
+    a {
+      display: block;
+      color: #e42a8e;
+    }
+  }
+
+}
