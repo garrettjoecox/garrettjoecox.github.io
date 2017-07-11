@@ -1,0 +1,48 @@
+.populr {
+  color: $offWhite;
+  background: #4b5182;
+  padding-bottom: 5rem;
+
+  .heading {
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.6rem;
+    }
+  }
+
+  .preview {
+    flex: 1 0;
+    padding: 2rem;
+    padding-top: 1rem;
+
+    img {
+      max-width: 100%;
+      border-radius: 4px;
+      border-top-left-radius: 0;
+    }
+  }
+
+  .copy {
+    flex: 1 0;
+
+    div {
+      white-space: pre-line;
+    }
+
+    span {
+      text-align: justify;
+      display: block;
+    }
+
+    a {
+      display: block;
+      color: #cd8165;
+    }
+  }
+}

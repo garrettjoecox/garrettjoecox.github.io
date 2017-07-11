@@ -11,6 +11,7 @@
   "rules": {
     "no-use-before-define": ["error", "nofunc"],
     "no-param-reassign": "off",
-    "no-confusing-arrow": "off"
+    "no-confusing-arrow": "off",
+    "arrow-body-style": "off"
   }
 }
