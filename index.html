@@ -13,26 +13,33 @@
   <meta property="og:description" content="Garrett Cox's Personal Website"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="http://garrettcox.io/"/>
-  <meta property="og:image" content="http://garrettcox.io/assets/og.png"/>
-  <link rel="stylesheet" type="text/css" href="dist.css">
+  <meta property="og:image" content="http://garrettcox.io/assets/og2.png"/>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
   <section class="about">
+    <div id="particles"></div>
     <div class="contained row">
       <pre>
-
 <span class="blue">~/dev</span> ❯❯❯ <span class="green">whoami</span>
 
-Name: Garrett Cox
-Location: Oklahoma City, OK
-Occupation: Software Engineer
+name=<span class="yellow">"Garrett Cox"</span>
+location=<span class="yellow">"Oklahoma City, OK"</span>
+occupation=<span class="yellow">"Software Engineer"</span>
+experience=<span class="yellow">"4+ Years"</span>
+
+<span class="blue">~/dev</span> ❯❯❯ <span class="green">cat</span> links.txt
+
 Github: <a href="https://github.com/garrettjoecox">@garrettjoecox</a>
 LinkedIn: <a href="https://www.linkedin.com/in/garrettjoecox">@garrettjoecox</a>
+Employer: <a href="https://clevyr.com/">Clevyr</a>
 
 <span class="blue">~/dev</span> ❯❯❯ <span class="green">cd</span> skills
 <span class="blue">~/dev/skills</span> ❯❯❯ <span class="green">npm</span> ls
 ├─┬ Javascript
-│ ├── <a href="http://www.2ality.com/2016/02/ecmascript-2017.html">ES2017</a>
+│ ├── <a href="http://2ality.com/2017/02/ecmascript-2018.html">ES2018</a>
+│ ├── <a href="https://webpack.js.org/">Webpack</a>
 │ ├── <a href="http://gulpjs.com/">Gulp</a>
 │ ├── <a href="https://www.typescriptlang.org/">Typescript</a>
 │ ├── <a href="https://babeljs.io/">Babel</a>
@@ -40,25 +47,30 @@ LinkedIn: <a href="https://www.linkedin.com/in/garrettjoecox">@garrettjoecox</a>
 │ ├── <a href="https://mochajs.org/">Mocha</a>/<a href="http://chaijs.com/">Chai</a>/<a href="http://sinonjs.org/">Sinon</a>
 │ ├── <a href="https://lodash.com/">Lodash</a>
 │ ├── <a href="http://electron.atom.io/">Electron (Minor)</a>
+│ ├── <a href="https://facebook.github.io/react-native/">React Native (Minor)</a>
 │ ├─┬ Server Side
 │ │ ├── <a href="https://nodejs.org/">NodeJS</a>
 │ │ ├── <a href="http://expressjs.com/">Express</a>
 │ │ ├── <a href="http://koajs.com/">Koa</a>
 │ │ ├── <a href="http://sailsjs.com/">Sails</a>
 │ │ └── <a href="http://docs.sequelizejs.com/en/v3/">Sequelize</a>
+│ │ └── <a href="https://knexjs.org/">Knex</a>
 │ └─┬ Client Side
+│   ├── <a href="https://facebook.github.io/react/">React</a>
 │   ├── <a href="https://angularjs.org/">Angular 1.x</a>
 │   ├── <a href="http://aurelia.io/">Aurelia</a>
-│   ├── <a href="http://backbonejs.org/">Backbone</a>
+│   ├── <a href="https://vuejs.org/">VueJS (Minor)</a>
+│   ├── <a href="https://mobx.js.org/">MobX</a>
+│   ├── <a href="https://redux.js.org/">Redux</a>
 │   ├── <a href="https://d3js.org/">D3</a>
 │   ├── <a href="https://jquery.com/">jQuery</a>
-│   ├── <a href="https://facebook.github.io/react/">React (Minor)</a>
-│   └── <a href="https://vuejs.org/">VueJS (Minor)</a>
+│   └── <a href="http://backbonejs.org/">Backbone</a>
 ├─┬ CSS
 │ ├── <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a>
 │ ├── <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Grid</a>
 │ ├── <a href="http://sass-lang.com/">Sass</a>
 │ └── <a href="http://lesscss.org/">Less</a>
+├── Ruby (Minor)
 ├─┬ Databases (Minor)
 │ ├── MySQL
 │ ├── PostgreSQL
@@ -66,104 +78,17 @@ LinkedIn: <a href="https://www.linkedin.com/in/garrettjoecox">@garrettjoecox</a>
 │ ├── Redis
 │ └── SQLite
 ├── HTML5
-├── <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)">Scrum</a>
+├── Agile Development/Scrum
 ├── Git
 ├── DevOps (Minor)
 ├── <a href="https://aws.amazon.com/">AWS (Minor)</a>
 └── <a href="https://www.elastic.co/">ElasticSearch (Minor)</a>
-
-<span class="blue">~/dev/skills</span> ❯❯❯ Scroll for work<span class="blink">_</span>
-      </pre>
-    </div>
-  </section>
-  <section class="exaptive">
-    <div class="heading row">
-      <img src="assets/exaptive.svg">
-      <span>exaptive</span>
-    </div>
-    <div class="contained row colm">
-      <div class="preview">
-        <img src="assets/wired.png">
-      </div>
-      <div class="copy">
-        <span class="tagline">"Build full-stack data applications without being a full-stack developer"</span>
-        <a href="http://www.exaptive.com">http://www.exaptive.com</a>
-        <span class="tagline">More copy coming soon</span>
-      </div>
-    </div>
-  </section>
-  <section class="populr">
-    <div class="heading row">
-      <span>populr</span>
-    </div>
-    <div class="contained row colm">
-      <div class="copy">
-        <span class="tagline">"Visualize the 'A-List' of the internet by watching over 5,000 notable persons as they trend across Twitter, Facebook, and hundreds of online news sites."</span>
-        <a href="http://garrettcox.io/populr2/#/">http://populr.io</a>
-        <span>Populr is both a public facing API and web application used to visualize the social capital ranking of celebrities based on a combination of social media and news analytics.</span>
-        <div>
-          Accomplishments:
-
-            * Architected and assembled the database model and API interface of the Populr API
-
-            * Designed and implemented the algorithms used to calculate each person's populr "score" based on a number of variables
-
-            * Implemented multiple web workers that are constantly running to retrieve the analytics/data used in Populr's scoring process.
-
-        </div>
-        <span>(Populr is currently undergoing a complete re-write, to improve performance, efficiency, and allow for easier administration)</span>
-      </div>
-      <div class="preview">
-        <img src="assets/populr2.png">
-      </div>
-    </div>
-  </section>
-  <section class="exaptive">
-    <div class="heading row">
-      <span>ScriptServer</span>
-    </div>
-    <div class="contained row colm">
-      <div class="copy">
-        <span class="tagline">Copy coming soon</span>
-      </div>
-    </div>
-  </section>
-  <section class="investment">
-    <div class="heading row">
-      <span>Investment Calc</span>
-    </div>
-    <div class="contained row colm">
-      <div class="copy">
-        <span class="tagline">Copy coming soon</span>
-      </div>
-    </div>
-  </section>
-  <section class="exaptive">
-    <div class="heading row">
-      <span>MazeRunner</span>
-    </div>
-    <div class="contained row colm">
-      <div class="copy">
-        <span class="tagline">Copy coming soon</span>
-      </div>
-    </div>
-  </section>
-  <section class="about">
-    <div class="contained row">
-      <pre>
 
 <span class="blue">~/dev/skills</span> ❯❯❯ <span class="green">exit</span>
 Thanks for stopping by! 🤙🏼
       </pre>
     </div>
   </section>
-  <!-- <section class="split row">
-    <div class="contained f1 row">
-      <section class="scriptserver f1">ScriptServer</section>
-      <section class="mazerunner f1">MazeRunner</section>
-      <section class="GoL f1">Game of Life</section>
-    </div>
-  </section> -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -172,6 +97,8 @@ Thanks for stopping by! 🤙🏼
 
     ga('create', 'UA-88756080-1', 'auto');
     ga('send', 'pageview');
+
+    particlesJS.load('particles', 'particles.json');
   </script>
 </body>
 </html>

@@ -1,12 +1,8 @@
 {
   "name": "garrettcox.io",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Personal Website",
-  "main": "index.js",
-  "scripts": {
-    "prestart": "gulp sass",
-    "start": "gulp serve"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.comgarrettjoecox/garrettjoecox.github.io.git"
@@ -17,21 +13,6 @@
     "url": "https://github.comgarrettjoecox/garrettjoecox.github.io/issues"
   },
   "homepage": "https://github.comgarrettjoecox/garrettjoecox.github.io#readme",
-  "devDependencies": {},
-  "dependencies": {
-    "eslint": "^3.9.1",
-    "eslint-config-airbnb": "^13.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.6.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.0.13",
-    "gulp-concat": "^2.6.0",
-    "gulp-connect": "^5.0.0",
-    "gulp-load-plugins": "^1.4.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.3.2",
-    "normalize.css": "^5.0.0"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
