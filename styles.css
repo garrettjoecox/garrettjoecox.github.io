@@ -77,3 +77,41 @@ body {
   color: #64b5f6;
   text-decoration: underline;
 }
+
+.albums {
+  padding: 25px;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.album {
+  margin: 25px;
+  height: 200px;
+  width: 200px;
+  background-color: #333;
+  background-size: cover;
+  background-position: center;
+  transition: all 100ms, filter 200ms ease;
+  filter: blur(1px) contrast(5) grayscale(90%);
+}
+
+.album:hover {
+  margin: 0;
+  height: 250px;
+  width: 250px;
+  filter: none;
+}
+
+.header {
+  font-family: monospace;
+  font-size: 2rem;
+  border-bottom: 1px solid white;
+  padding: 0.5rem 1rem;
+}
+
+.now-playing-hide {
+  margin-left: auto;
+  font-family: monospace;
+  text-align: right;
+  display: none;
+}
